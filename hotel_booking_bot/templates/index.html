@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hotel Bot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="chatbot-widget">
+    <div class="chatbot-header">
+      <span>Hotel Bot</span>
+      <button class="close-btn" onclick="toggleChat()">×</button>
+    </div>
+    <div class="chatbot-body" id="chatbox"></div>
+    <div class="chatbot-input">
+      <input type="text" id="userInput" placeholder="Type your message..." />
+      <button onclick="sendMessage()">
+        <img src="https://img.icons8.com/material-rounded/24/000000/filled-sent.png" alt="Send" />
+      </button>
+    </div>
+  </div>
+
+  <div class="chatbot-toggle" onclick="toggleChat()">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/chat.png" alt="Chat" />
+  </div>
+
+  <script src="{{ url_for('static', filename='chatbot.js') }}"></script>
+</body>
+</html>
